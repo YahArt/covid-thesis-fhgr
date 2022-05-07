@@ -59,6 +59,18 @@
      name=DSR,
      description={Design science Research}
  }
+ 
+ \newglossaryentry{covid19}
+ {
+     name=COVID-19,
+     description={Coronavirus-Krankheit-2019 ~\citep{covid19}}
+ }
+ \newglossaryentry{bfs}
+ {
+     name=BFS,
+     description={Bundesamt für Statistik}
+ }
+ 
  \newglossaryentry{foph}
  {
      name=FOPH,
@@ -87,10 +99,10 @@
 \begin{titlepage}
 	\begin{center}
 		\Huge
-		\textbf{Bachelorthesis}
+		\textbf{Bachelorthesis}\\
 		\vspace{0.5cm}
 		\LARGE
-		Analyse und Implementierung eines personalisierbaren Corona dashboards für Millenials
+		Analyse und Implementierung eines personalisierbaren Corona Dashboards für Millenials
 
 		\vspace{1.5cm}
 		\normalsize
@@ -121,6 +133,8 @@ TODO
 
 \clearpage
 \tableofcontents
+
+\clearpage
 \listoffigures
 \listoftables
 
@@ -131,9 +145,26 @@ TODO
 
 \clearpage
 \section{Einleitung}
-Die Coronavirus-Pandemie (fortlaufend als Corona bezeichnet) hat in grossen Teilen der Welt seine Spuren hinterlassen. So geht gemäss dem \Gls{foph} hervor, dass im Zeitraum vom 24.02.2020 bis zum 10.03.2022 mehr als 3 Millionen Ansteckungen in der Schweiz, sowie im Liechtenstein verzeichnet worden sind ~\citep{FOPH.13.03.2022}. Ein wichtiges Mittel zur Kommunikation mit der Bevölkerung sind hierbei Datenvisualisierungen, insbesondere Dashboards.
-Der Begriff Dashboard kommt ursprünglich aus dem Englischen und bezieht sich auf das Armaturenbrett des Autos, wo alle relevanten Informationen übersichtlich auf einem Blick ersichtlich sind ~\citep{Duden.18.04.2022}.\\
+Seit Beginn der Menschheitsgeschichte gab es bereits unzählige Pandemien, welche Ihren Tribut gefordert haben. Die neuste Pandemie, auch bekannt unter dem Namen \Gls{covid19}, ist hierbei keine Ausnahme und zählt zu den Spitzenreitern in Bezug auf die tägliche Anzahl krankheitsbedingter Todesfälle (siehe Abbildung 1).
 
+\begin{figure}[ht]
+    \includegraphics[width=12cm]{images/krankheitsbedingte_todesfälle_nach_erkrankung.png}
+    \centering
+    \caption{Durchschnittliche tägliche Anzahl krankheitsbedingter Todesfälle weltweit nach Erkrankung (Stand:
+1. Januar 2021) ~\citep[S. 12]{worldwide_epidemic_cases_study}}
+\end{figure}
+
+\Gls{covid19}, fortlaufend als Corona bezeichnet, hat sowohl in den wirtschaftlichen als auch in den sozialen Strukturen tiefgreifende Veränderungen herbeigeführt. Um die Bevölkerung auf die Gefahr der Pandemie zu sensibilisieren und die rasant steigenden Fallzahlen (siehe Abbildung 2) des Virus einzudämmen, wurden diverse Anstrengungen unternommen.
+
+\begin{figure}[ht]
+    \includegraphics[width=10cm]{images/corona_fallzahlen.png}
+    \centering
+    \caption{Entwicklung der weltweiten Fallzahl des Coronavirus (COVID-19) seit Januar 2020 ~\citep{covid_cases_worldwide}}
+\end{figure}
+
+Eine zentrale Rolle spielten hierbei \textit{Datenvisualisierungen}. Wichtig in diesem Kontext zu verstehen, ist es, dass sich der Begriff Datenvisualisierungen nicht nur aus Linien- oder Kuchendiagrammen definiert, sondern ein breites Spektrum von verschiedenen Visualisierungsarten, darunter auch Infografiken, abdeckt. So erstellte zum Beispiel das \Gls{bfs} diverse Infografiken in den Bereichen Gesundheit, Kultur sowie Kriminalität, in Bezug auf Corona ~\citep{covid19_bfs_infografiken}.
+
+Besonders während einer weltweiten Pandemie wie Corona ist eine akkumulierte Sicht von verschiedenen Visualisierungsarten von zentraler Bedeutung. Dies kann mit Hilfe von \textit{Dashboards} bewerkstelligt werden. Der Begriff Dashboard kommt ursprünglich aus dem Englischen und bezieht sich auf das Armaturenbrett des Autos, wo alle relevanten Informationen übersichtlich auf einem Blick sichtbar sind ~\citep{Duden.18.04.2022}. In Bezug auf Corona werden auf Dashboards unter anderem wichtige Informationen wie Ansteckungszahlen und Todesfälle visualisiert. Ein Beispiel für ein Dashboard ist das \textit{WHO Coronavirus Dashboard}, welches von der \Gls{who} erstellt wurde ~\citep{who_dashboard}. Dass nebst dem in der Schweiz angesiedelten BFS selbst eine weltweite Organisation wie WHO sich um die Erstellung von Dashboards zur Corona Thematik bemüht, soll aufzeigen wie wichtig Datenvisualisierungen und insbesondere Dashboards geworden sind.
 
 \subsection{Stand der Forschung}
 Die Coronavirus-Pandemie greift seit ihrem Aufkommen im Jahr 2019 in eine Vielzahl von Lebensbereichen ein. Es ist wenig verwunderlich, dass zu einem solch einschnei-dendem Thema eine grosse Anzahl von wissenschaftlichen Publikationen erstellt worden sind. Eine Publikation untersuchte die Vielzahl von Corona Datenvisualisierungen und weist ihnen verschiedene Arten von Intentionen (Aussage über den Verlauf der Pandemie etc.) zu ~\citep{YixuanZhang.}. Weitere Quellen untersuchten speziell für das Web zugeschnittene Corona Dashboards und leiteten daraus Design Guidelines ab ~\citep{Ivankovic.2021}. Andere Studien wiederum haben sich mit der Erstellung von Dashboards für spezielle Nutzergruppen auseinandergesetzt ~\citep{Ivanov.2018}. Auch wurde bereits im Zuge einer Studie die Schwierigkeiten bei der Erstellung von Corona Dashboards aus dem Blickwinkel der eigentlichen Ersteller evaluiert ~\citep{Barbazza.}. Jedoch scheint es zum jetzigen Zeitpunkt noch keine Studie zu geben, welche die Erstellung von \textbf{personalisierbaren} Corona Dashboards für eine bestimmte Zielgruppe behandelt unter Berücksichtigung eines Nutzerzentrierten Vorgehens untersucht.
