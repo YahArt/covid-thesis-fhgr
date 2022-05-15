@@ -192,7 +192,7 @@ Während der Corona Pandemie sind eine Vielzahl von Dashboards angefertigt worde
 \end{figure}
 
 
-Es gibt aber auch Studien welche die Corona-Dashboards aus dem Blickwinkel der Ersteller betrachten. Die Studie von Barbazza untersuchte die gesammelten Erfahrungen von rund 33 nationale Teams, welche für die Umsetzung von Corona-Dashboards verantwortlich waren. Die Studie geht hierbei konkret auf die gemachten Erfahrungen innerhalb der Teams im ersten Jahr der Pandemie ein. Hieraus wurden anschliessend allgemeine Barrieren (common barriers), Dinge welche unterstützend waren (enabler) sowie die gemachten Erfahrungen innerhalb der Teams (lessons) thematisiert ~\citep{Barbazza.}.
+Es gibt aber auch Studien welche Corona-Dashboards aus dem Blickwinkel der Ersteller betrachten. Die Studie von Barbazza untersuchte die gesammelten Erfahrungen von rund 33 nationale Teams, welche für die Umsetzung von Corona-Dashboards verantwortlich waren. Die Studie geht hierbei konkret auf die gemachten Erfahrungen innerhalb der Teams im ersten Jahr der Pandemie ein. Hieraus wurden anschliessend allgemeine Barrieren (common barriers), Dinge welche unterstützend waren (enabler) sowie die gemachten Erfahrungen innerhalb der Teams (lessons) thematisiert ~\citep{Barbazza.}.
 
 \subsection{Forschungsfrage}
 Die bestehenden Studien von Corona-Dashboards, sowie Datenvisualisierungen sprechen primär eine \textit{breite Zielgruppe} an. Zudem bieten bestehende Dashboards nach der Erstellung nur \textit{sehr begrenzte Anpassungsmöglichkeiten durch den Nutzer selbst}. Die vorliegende Arbeit möchte diese Lücke schliessen und formuliert daher folgende übergeordnete Fragestellung:
@@ -232,25 +232,23 @@ Bei diesem Modell gibt es mehrere Einstiegsmöglichkeiten (siehe \textit{Possibl
 
 
 \clearpage
-\section{Problemidentifizierung und Motivation}
-Gemäss Peffers soll der Schritt \textit{Problem Identification and Motivation} dabei helfen, den Nutzen einer möglichen Lösung aufzuzeigen. Dies wiederum steigert zum einen die Motivation an der Arbeit selbst und sorgt zum anderen dafür, dass die Beweggründe für alle verständlich sind ~\citep[S. 52 + 55]{K.Peffers.2007}. 
-
-Das Ziel dieses Kapitels ist es das bestehende Problem mit \textbf{webbasierten} Corona Dashboards aufzuzeigen. Hierzu wird zuerst eine klare Definition des Begriffs Dashboard vorgenommen. Anschliessend folgt die Identifikation der wichtigsten Komponenten eines webbasierten Dashboards, sowie eine Übersicht über die verschiedenen Arten von webbasierten Dashboards, wobei auch auf die verschiedenen Probleme eingegangen wird. Abgerundet wird dieses Kapitel mit der Begründung der Motivation. 
+\section{Webbasierte Corona Dashboards}
 
 \subsection{Dashboard – Ein Begriff mit Ursprung in der Automobilindustrie}
     Dashboard bedeutet übersetzt \textit{Armaturenbrett}. Hiermit ist das Armaturenbrett beim Auto gemeint ~\citep{Duden.18.04.2022}. Die Hauptfunktion des Armaturenbrett besteht darin, alle notwendigen Informationen wie Geschwindigkeit, Kilometerzähler etc. schnell und einfach auf einen Blick zu visualisieren. Im Kontext dieser Arbeit wird unter dem Begriff Dashboard die Definition von Duden verwendet. Duden definiert ein Dashboard als: \textbf{Ein Computerprogramm das relevante Informationen zusammenfasst und übersichtlich darstellt} ~\citep{Duden.18.04.2022}. gemeint.
 
 
-\subsection{Komponenten und Vorteile von webbasierten Dashboards}
+\subsection{Aufbau und Komponenten von webbasierten Dashboards}
 Webbasierte Dashboards sind Dashboards, welche über das Internet zugänglich gemacht werden und mit Hilfe eines Webbrowsers dargestellt werden können. Wie herkömmliche Webseiten funktionieren auch webbasierte Dashboards nach dem \textit{Client-Server-Modell} (siehe Abbildung 6). Hierbei sendet der Browser (PC, Smartphone etc.) beim Besuch einer Internet Seite (\url{https://www.covid19.admin.ch/en/overview}) eine Anfrage an den Web Server. Dieser wiederum Antwortet mit dem gewünschten Inhalt (Corona Dashboard). Jedoch benötigt es noch eine dritte, sehr zentrale Komponente, die Datenquelle. In der heutigen Zeit sind Internet Seiten keine starren Textkonstrukte mehr, sie passen sich dynamisch an die Anforderungen des Nutzers an. Besonders für webbasierte Corona Dashboards sind dynamische Daten von enormer Bedeutung. 
 
-\clearpage
 Grundsätzlich wird für webbasierte Dashboards mindestens folgende Komponenten benötigt:
 \begin{itemize}
     \item Web Server auf welchem die eigentliche Web Applikation läuft und welcher Anfragen entgegennimmt
     \item Datenbank auf welcher die Daten vorhanden sind
     \item Schnittstelle zwischen Datenbank und Webserver, welche die Kommunikation dieser beiden Komponenten ermöglicht
 \end{itemize}
+
+\subsection{Vorteile}
 
 Ein grosser Vorteil von webbasierten Dashboards besteht in der grossen Erreichbarkeit der Nutzer. In der heutigen Zeit besitzen die meisten Personen nebst einem Computer ebenfalls über ein Smartphone mit integriertem Browser. Somit ist der Zugriff auf ein webbasiertes Dashboard nebst dem Computer auch über das Smartphone, über ein Tablet etc. möglich. Dies ist von enormer Bedeutung, da man so ortsunabhängig immer auf dem aktuellen Stand ist. Auch können moderne Web Applikationen Gebrauch vom GPS System des Smartphones machen und so standortbezogene Daten liefern. Die Voraussetzung hierzu ist lediglich die Nutzung eines modernen Browsers.
 
@@ -260,12 +258,20 @@ Ein grosser Vorteil von webbasierten Dashboards besteht in der grossen Erreichba
 	\caption{Client-Server-Modell ~\citep{client_server_model}}
 \end{figure}
 
+\clearpage
+\section{Problemidentifizierung und Motivation von webbasierten Corona Dashboards}
+Gemäss Peffers soll der Schritt \textit{Problem Identification and Motivation} dabei helfen, den Nutzen einer möglichen Lösung aufzuzeigen. Dies wiederum steigert zum einen die Motivation an der Arbeit selbst und sorgt zum anderen dafür, dass die Beweggründe für alle beteiligten Personen verständlich sind ~\citep[S. 52 + 55]{K.Peffers.2007}.
 
-\subsection{Überblick über webbasierte Corona Dashboards}
-TODO
+
+\subsection{Problemidentifikation}
+Als Grundlage für die Problemidentifikation von webbasierten Corona Dashboards dient die Studie von Barbazza. Die Studie erhob die Erfahrungen und Eindrücke von 33 verschiedenen Teams im europäischen Raum, welche für die Konzeption und Umsetzung von Corona Dashboards verantwortlich waren. Im Rahmen der Studie wurden rund 80 Personen aus den 33 Teams befragt. Mit Hilfe von qualitativ durchgeführten Interviews wurden anschliessend verschiedene Kategoriesysteme gebildet. Im Kategoriesystem \textit{Nutzer} fallen folgende Problematiken auf ~\citep[S. 14 + 15]{Barbazza.}:
+\begin{itemize}
+    \item Keine Definierung einer dedizierten Zielgruppe für Dashboards, Dashboards wurden mehrheitlich für die breite Öffentlichkeit etc. konzipiert
+    \item Limitierte Auffassung über den Informationsbedarf der Zielgruppe, kein systematischer Weg um an Nutzer Feedback zu gelangen
+\end{itemize}
 
 \subsection{Motivation – Erstellung eines personalisierbaren Corona Dashboards für Millennials}
-TODO
+Das Ziel dieser Arbeit ist die Konzeption und Erstellung eines Corona Dashboards für die Zielgruppe Millennials. Hierbei soll konkret ermittelt werden, welche Informationen sowie Visualisierungsarten für die Zielgruppe von Relevanz sind. Zudem soll ein besonderer Aspekt auf die Anpassbarkeit (Personalisierbarkeit) des Corona Dashboards gelegt werden. Die Lösung soll dazu dienen, den Erstellungsprozess von Dashboards in die Hände der Zielgruppe selbst zu legen. Nutzer können hierbei aus einem Katalog von Visualisierungen auswählen und ihr ganz persönliches Dashboard gestalten. Das erstellte Dashboard kann anschliessend an die relevanten Behörden (BAG) gesendet werden und soll so neue Ideen für Dashboard Designs antreiben sowie das Einholen von Feedback fördern.
 
 \clearpage
 \section{Identifikation der Ziele}
