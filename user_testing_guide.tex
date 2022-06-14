@@ -1,0 +1,147 @@
+\documentclass[12pt, oneside]{article}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{times}
+\usepackage{url}
+\urlstyle{same}
+\usepackage{multirow}
+\usepackage[usegeometry]{typearea}
+% Useful for checking layout
+% \usepackage{showframe}
+\usepackage{fancyhdr}
+\usepackage{blindtext}
+% Indenting the first sentence after section
+\usepackage{indentfirst}
+% Set language
+\usepackage[german]{babel}
+
+
+\geometry{
+ a4paper,
+ left=30mm,
+ top=25mm,
+ right=25mm,
+ bottom=20mm,
+ footskip=15pt,
+}
+
+\setstretch{1.3} % Define Line Spacing
+\renewcommand{\headrulewidth}{0pt} % Remove footer line
+
+\pagestyle{fancy} % Allow for customizing header and footer
+% Customize footer for page number location
+\fancyhf{}
+\fancyfoot{}
+\fancyhead[R]{Yannick Hutter}
+\fancyhead[L]{Bachelorthesis}
+\fancyfoot[R]{\thepage}
+
+
+\begin{document}
+
+\subsection*{Leitfaden für Remote Lab Usability Testing}
+
+\subsubsection*{Einleitung}
+Im Rahmen meiner Bachelor Arbeit habe ich eine Web Applikation entwickelt, welchen es Nutzern erlaubt ihr persönliches Corona Dashboard zu erstellen. Ihm Rahmen dieses Usability Testing würde mich interessieren, wie Sie eine solche Applikation nutzen würden.
+\\
+
+\textit{Administrativer Teil}
+\\
+Kommen wir nun noch kurz zum administrativen Teil. Wie Sie bereits im Vorfeld informiert worden sind, wird dieses Meeting aufgezeichnet. Dies beinhaltet dabei sowohl Ton als auch das Video auf Ihrem Computer. Diese Aufnahmen werden jedoch nicht veröffentlicht, sondern dienen lediglich als Grundlage für Auswertungszwecke im Rahmen dieser Arbeit\\\\
+\textbf{WICHTIG: AUFNAHME STARTEN}
+
+
+\clearpage
+\subsubsection*{Hauptteil}
+
+\textit{Warm-Up Fragen}
+\begin{itemize}
+    \item Haben Sie bereits persönliche Erfahrungen mit Applikationen die ihnen erlauben ihr eigenes Dashboard zu erstellen?
+\end{itemize}
+
+\textit{Task 1: Willkommensseite}
+\begin{itemize}
+    \item Wie finden Sie prinzipiell die hier aufgeführten Hauptbereiche entsprechen diese Ihren Vorstellungen, vermissen Sie gewisse Punkte?
+    \item Wo würden Sie klicken um ihr eigenes Dashboard erstellen zu können?
+\end{itemize}
+
+\textit{Task 2: Dashboard erstellen}
+\begin{itemize}
+    \item Klicken auf \textbf{Create a Dashboard}
+    \item Name eingeben
+    \item Vorlage (beobachten was Nutzer instinktiv tut)
+    \item Schauen ob Nutzer auf Create a Dashboard oder auf Create and Edit klickt
+\end{itemize}
+
+\textit{Task 3: Dashboard gestalten}
+\begin{itemize}
+    \item Klick auf Plus Button
+    \item Widget aus dem Dialog auswählen
+    \begin{itemize}
+        \item Covid Deaths Over Time - Line Chart
+        \item Sum of Covid Deaths over Time - Line Chart
+        \item Sum of Covid Deaths Total - Bar Chart
+        \item Hospital Capacity - Map
+        \item Hospital Capacity - Bar Chart
+    \end{itemize}
+    \item Versuchen Widget zu verschieben (schauen ob Bleistift Symbol verstanden wird)
+    \item Versuchen Widget zu vergrössern
+    \item Versuchen Widget zu löschen
+    \item Versuchen Edit Mode zu deaktivieren und fragen was Nutzer bei deaktiviertem Edit Mode erwarten
+    \item Schauen ob Nutzer selbst darauf kommen dass Sie bei Liniendiagrammen zoom können
+\end{itemize}
+
+\textit{Task 4: Filtern}
+\begin{itemize}
+\item Versuchen zu filtern (schauen wo Nutzer klickt)
+    \begin{itemize}
+        \item Regionen auswählen welche von Interesse sind (Vorschlag SZ, TG, TI, ZH)
+        \item Zeitbereich auswählen welcher von Interesse ist (Vorschlag: 01.03.2020 - 31.05.2020)
+        \item Schauen wie der Nutzer auf Fehlerhinweise (keine Region ausgewählt etc. reagiert, mehr als 4 Regionen)
+        \item Schauen ob Nutzer verstehen, dass Sie auf Save Time Range klicken müssen und ihn erst dann auswählen können
+        \item Schauen ob Nutzer verstehen, dass Sie auf Apply Filter klicken müssen
+        \item Schauen wie Nutzer einen Zeitfilter wechseln würden
+        \item Schauen wie Nutzer einen Zeitfilter löschen würden
+        \item Zeitbereich einstellen bei dem es keine Daten gibt und schauen was Nutzer erwarten würden
+    \end{itemize}
+\end{itemize}
+
+\textit{Task 5: Speichern}
+\begin{itemize}
+\item Wo würden Nutzer klicken um zu speichern
+\item Was erwarten Nutzer, dass gespeichert werden soll (Zoom Bereich bei Trends), Filter etc.
+\end{itemize}
+
+\textit{Task 6: Dashboard Overview}
+\begin{itemize}
+\item Was halten Sie von der Dashboard Übersicht?
+\item Wo würden Sie klicken um Ihr Dashboard zu teilen (auffordern zu klicken)
+\item Wo würden Sie klicken um Ihr Dashboard zu löschen (auffordern zu klicken)
+\item Neuen Browser Tab öffnen und den Share-Link aus dem Clipboard einfügen
+\item Notieren wie Nutzer nun reagiert (er hat das geteilte Dashboard gerade gelöscht)
+\end{itemize}
+
+\textit{Task 7: FAQ}
+\begin{itemize}
+\item Wie finden Sie den Aufbau / Layout?
+\item Vermissen Sie etwas (Suchfunktion etc.)?
+\end{itemize}
+
+\textit{Task 8: About}
+\begin{itemize}
+\item Wie finden Sie den Aufbau / Layout?
+\item Vermissen Sie etwas?
+\end{itemize}
+
+
+\subsubsection*{Schlussteil}
+\begin{itemize}
+    \item Sind Ihnen die Notifications im unteren Bereich aufgefallen
+    \item Wie haben Sie die Filterfunktionalität gefunden, hat Sie etwas daran gestört (z.Bsp. Filter Parameter sollten Global sichtbar sein ohne Sidenav aufklappen zu müssen etc.)
+    \item Hätten Sie eine Filterinformation pro Widget gewünscht (als Overlay Toggle etc.)
+    \item Wünschen Sie noch etwas zu ergänzen oder etwas mitzuteilen?
+\end{itemize}
+
+\textbf{WICHTIG: EINWILLIGUNGSERKLÄRUNG PER E-MAIL SENDEN}
+\end{document}
