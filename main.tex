@@ -92,9 +92,6 @@
 \listoffigures
 \listoftables
 
-\clearpage
-\printglossary[type=\acronymtype]
-
 \pagenumbering{arabic}
 \fancyfoot[R]{Seite \thepage\ von \pageref{LastPage}}
 
@@ -129,6 +126,11 @@
 
 \clearpage
 \appendix
+
+\clearpage
+\printglossary[title=Abkürzungsverzeichnis, type=\acronymtype]
+
+\clearpage
 \include{appendix/app-research-protocol}
 
 \clearpage
