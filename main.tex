@@ -12,7 +12,7 @@
 \usepackage{longtable}
 \usepackage{graphicx}
 \usepackage[natbibapa]{apacite}
-\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[font=small]{caption}
 \usepackage{booktabs}
 \usepackage{lastpage}
 
@@ -22,7 +22,6 @@
  top=25mm,
  right=25mm,
  bottom=20mm,
- footskip=15pt,
 }
 
 \graphicspath{ {./images/} }
@@ -33,14 +32,14 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
-\fancyhead[R]{Yannick Hutter}
-\fancyhead[L]{Bachelorthesis}
+\fancyhead[R]{\small Yannick Hutter}
+\fancyhead[L]{\small Bachelorthesis}
 \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 
 \setabbreviationstyle[acronym]{long-short}
 \newacronym{dsr}{DSR}{Design Science Research}
-\newacronym{covid19}{COVID-19}{Coronavirus-Krankheit-2019 ~\citep{covid19}}
+\newacronym{covid19}{COVID-19}{Coronavirus-Krankheit-2019}
 \newacronym{bfs}{BFS}{Bundesamt für Statistik}
 \newacronym{foph}{FOPH}{Federal Office of Public Health}
 \newacronym{fhgr}{FHGR}{Fachhochschule Graubünden}
@@ -92,10 +91,9 @@
 \listoffigures
 \listoftables
 
-\pagenumbering{arabic}
-\fancyfoot[R]{Seite \thepage\ von \pageref{LastPage}}
-
 \clearpage
+\pagenumbering{arabic}
+\fancyfoot[R]{\small Seite \thepage\ von \pageref{LastPage}}
 \include{chapters/ch-introduction}
 
 \clearpage

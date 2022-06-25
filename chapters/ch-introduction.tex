@@ -1,56 +1,120 @@
 \section{Einleitung}
-Seit Beginn der Menschheitsgeschichte gab es bereits unzählige Pandemien, welche ihren Tribut gefordert haben. Die neuste Pandemie, auch bekannt unter dem Namen \gls{covid19}, ist hierbei keine Ausnahme und zählt zu den Spitzenreitern in Bezug auf die tägliche Anzahl krankheitsbedingter Todesfälle nach einer Erkrankung (siehe Abbildung 1).
+In Bezug auf den Schweregrad gab es in der Schweiz seit der Spanischen Grippe im Jahr 1918 keine vergleichbaren Pandemien mehr. Kasbar Staub bezeichnet den Zeitraum von 1918 - 2020, in welchem es keine verheerenden Pandemien für die Schweiz gab, als \textit{Pandemic Gap in Switzerland} (siehe Abbildung \ref{fig:pandemic_gap_switzerland}). Mit dem Auftreten der neusten Pandemie im Jahr 2019, bekannt unter dem Namen \gls{covid19} steht die Schweiz, sowie auch der Rest der Welt vor neuen Herausforderungen.
 
-\begin{figure}[ht]
-    \includegraphics[width=12cm]{images/krankheitsbedingte_todesfälle_nach_erkrankung.png}
+\begin{figure}[h]
+    \includegraphics[width=12cm]{images/pandemic_gap_switzerland.png}
+    \centering
+    \caption{Visualisierung Pandemic Gap in Switzerland ~\citep{switzerland_pandemic_gap}}
+    \label{fig:pandemic_gap_switzerland}
+\end{figure}
+
+
+Gemäss der Studie von Statista, welche Epidemien und Pandemien aus dem Jahr 1918 bis 2021 miteinander vergleicht, hebt sich Corona mit rund 5000 krankheitsbedingten Todesfällen pro Tag merklich von anderen Virusvarianten ab (siehe Abbildung \ref{fig:daily_deaths_due_to_contamination}).
+
+\begin{figure}[h]
+    \includegraphics[width=12cm]{images/daily_deaths_after_contamination.png}
     \centering
     \caption{Durchschnittliche tägliche Anzahl krankheitsbedingter Todesfälle weltweit nach Erkrankung (Stand:
-1. Januar 2021) ~\citep[S. 12]{worldwide_epidemic_cases_study}}
+1. Januar 2021) ~\citep[S. 6]{worldwide_epidemic_cases_study}}
+    \label{fig:daily_deaths_due_to_contamination}
 \end{figure}
 
-\gls{covid19}, fortlaufend als Corona bezeichnet, hat sowohl in den wirtschaftlichen als auch in den sozialen Strukturen tiefgreifende Veränderungen herbeigeführt. Um die Bevölkerung auf die Gefahr der Pandemie zu sensibilisieren und die rasant steigenden Fallzahlen (siehe Abbildung 2) des Virus einzudämmen, wurden diverse Anstrengungen unternommen.
+Ein zentrales Mittel zur Sensibilisierung der allgemeinen Bevölkerung in Bezug auf den Schweregrad der Pandemie sind hierbei \textbf{Datenvisualisierungen} und insbesondere \textbf{Dashboards}. Dies bestätigt ebenfalls Barbazza in seinem Paper, welche die Erfahrungen von 33 nationalen Teams in Bezug auf die Erstellung von Corona spezifische Dashboards im Rahmen einer qualitativen Studie auswertete. Gemäss dem Paper geht hevor, dass Regierungen in der europäischen WHO Region primär ein Dashboard nutzten, um Corona spezifische Daten der Öffentlichkeit mitzuteilen ~\citep[S. 2]{barbazza}. Barbazza identifizierte im Rahmen von qualitativ durchgeführten Experteninterviews mit Personen welche für die Erstellung von Dashboards verantwortlich waren zwei Problematiken. Zum einen wurden die Dashboards für die breite Öffentlichkeit und nicht für eine dedizierte Zielgruppe konzipiert, zum anderen gab es keine effiziente Möglichkeit um an das Feedback der Nutzergruppe zu gelangen ~\citep[S. 14-15]{barbazza}. Die vorliegende Arbeit untersucht diese Problematiken mit der Umsetzung eines Corona Dashboards für die Zielgruppe der Millenials.
 
-\begin{figure}[ht]
-    \includegraphics[width=10cm]{images/corona_fallzahlen.png}
-    \centering
-    \caption{Entwicklung der weltweiten Fallzahl des Coronavirus (COVID-19) seit Januar 2020 ~\citep{covid_cases_worldwide}}
-\end{figure}
-
-Eine zentrale Rolle spielten hierbei \textit{Datenvisualisierungen}. Wichtig in diesem Kontext zu verstehen ist, dass sich der Begriff Datenvisualisierungen nicht nur aus Linien- oder Kuchendiagrammen definiert, sondern ein breites Spektrum von verschiedenen Visualisierungen, darunter auch Infografiken, abdeckt. So erstellte zum Beispiel das \gls{bfs} diverse Infografiken in den Bereichen Gesundheit, Kultur sowie Kriminalität, in Bezug auf Corona ~\citep{covid19_bfs_infografiken}.
-
-Besonders während einer weltweiten Pandemie wie Corona ist eine akkumulierte Sicht von verschiedenen Visualisierungsarten von zentraler Bedeutung. Dies kann mit Hilfe von \textit{Dashboards} bewerkstelligt werden. Der Begriff Dashboard kommt ursprünglich aus dem Englischen und bezieht sich auf das Armaturenbrett des Autos, wo alle relevanten Informationen übersichtlich auf einem Blick sichtbar sind ~\citep{term_definition_dashboard}. In Bezug auf Corona werden auf Dashboards unter anderem wichtige Informationen wie Ansteckungszahlen und Todesfälle visualisiert. Ein Beispiel für ein Dashboard ist das \textit{WHO Coronavirus Dashboard}, welches von der \gls{who} erstellt wurde ~\citep{who_dashboard}. Dass nebst dem in der Schweiz angesiedelten BFS selbst eine weltweite Organisation wie WHO sich um die Erstellung von Dashboards zur Corona Thematik bemüht, soll aufzeigen wie wichtig Datenvisualisierungen und insbesondere Dashboards geworden sind.
 
 \subsection{Stand der Forschung}
- Die Coronavirus-Pandemie greift seit ihrem Aufkommen im Jahr 2019 in eine Vielzahl von Lebensbereichen ein. Es ist wenig verwunderlich, dass zu einem solch einschneidendem Thema eine grosse Anzahl von wissenschaftlichen Publikationen erstellt worden sind. Nachfolgend wird auf die wichtigsten bereits bestehenden Studien eingegangen, welche sich mit Corona Datenvisualisierungen sowie mit Dashboards im Allgemeinen beschäftigen.
+ Eine Studie von Statista zum Thema \gls{covid19} zeigt auf, dass die Suchbegriffe ``Corona`` sowie  ``\gls{covid19}`` sehr präsent sowohl bei Medienberichten als auch bei Google-Anfragen sind (siehe Abbildung \ref{fig:covid_term_public_media_presence}).
+ 
+\begin{figure}[h]
+    \includegraphics[width=12cm]{images/covid_term_public_media_presence.png}
+    \centering
+    \caption{Beachtung der Corona Begrifflichkeiten in Medienberichten und bei Google-Anfragen vom 10. Februar 2020 bis 27. März 2020 ~\citep[S. 50]{covid_term_public_media_presence}}
+    \label{fig:covid_term_public_media_presence}
+\end{figure}
+ 
+Nachfolgend wird auf die wichtigsten bereits bestehenden Studien eingegangen, welche sich mit  \textbf{Datenvisualisierungen} sowie \textbf{Dashboards} im Zusammenhang mit Corona beschäftigen.
  
  \subsubsection{Die Landschaft der Corona Datenvisualisierungen}
- Eine massgebende Studie um einen Überblick über die \textit{Landschaft der Corona Datenvisualisierungen} zu erhalten, ist die Studie von Zhang. Bei dieser Studie wurden rund 668 Corona Datenvisualisierungen im Zeitraum vom 22. Januar bis zum 31. Juli 2020 analysiert. Ein wichtiges Auswahlkriterium bei diesen Visualisierungen war, dass die allgemeine Bevölkerung als Zielgruppe im Fokus stand. Anschliessend wurden diese Visualisierungen sowohl mittels \textit{deduktiver} als auch \textit{induktiver} Codierung in Form eines Codebooks zusammengefasst ~\citep[S. 3]{yixuan_zhang}. Aus dem erstellten Codebook sind ebenfalls verschiedene \textit{Nachrichtenkategorien} sowie die dazugehörigen \textit{Visualisierungsarten} ersichtlich. Eine Nachrichtenkategorie beschreibt hierbei die Intention der Datenvisualisierungen (zum Beispiel Information über den Schweregrad der Pandemie). Unter die Kateogrie Visualisierungsarten fallen zum Beispiel Liniendiagramme etc. Beim Erstellen des Codebooks wurde zudem ein \textit{konzeptionelles Framework zum Verständnis von Datenvisualisierungen in Krisenzeiten} erstellt (siehe Abbildung 3). Die Studie von Zhang fokusierte sich hierbei primär auf die ersten drei Aspekte des Models (\textit{who uses what data to communicate what message in what form}). 
+ Eine massgebende Studie um einen Überblick über die Landschaft der Corona Datenvisualisierungen zu erhalten, ist die Studie von Zhang. Bei dieser Studie wurden rund 668 Corona Datenvisualisierungen im Zeitraum vom 22. Januar bis zum 31. Juli 2020 analysiert. Ein wichtiges Auswahlkriterium bei diesen Visualisierungen war, dass die allgemeine Bevölkerung als Zielgruppe im Fokus stand. Anschliessend wurden diese Visualisierungen sowohl mittels \textit{deduktiver} als auch \textit{induktiver} Codierung in Form eines Codebooks zusammengefasst ~\citep[S. 3]{yixuan_zhang}. Nebst dem Codebook erstellte Zhang zudem ein Rahmenwerk zum Verständnis von Datenvisualisierungen in Krisenzeiten (siehe Abbildung \ref{fig:zhang_conceptual_framework}).
  
- \begin{figure}[ht]
+ 
+ \begin{figure}[h]
     \includegraphics[width=12cm]{images/zhang_conceptual_framework.png}
     \centering
     \caption{Konzeptionelles Framework zum Verständnis von Datenvisualisierungen in Krisenzeiten ~\citep[S. 4]{yixuan_zhang}}
+    \label{fig:zhang_conceptual_framework}
 \end{figure}
  
-\subsubsection{Corona-Dashboards}
-Während der Corona Pandemie sind eine Vielzahl von Dashboards angefertigt worden. Eine interessante Studie in diesem Zusammenhang ist die Studie von Ivankovic ~\citep{ivankovic}. Diese Studie untersuchte im Speziellen \textit{webbasierte Dashboards}. Konkret wurden hierbei Aspekte wie Funktion (Purpose), Inhalt und Daten (What) sowie die eigentliche Visualisierung (how they communicate COVID-19 data) untersucht. Aus den insgesamt 158 untersuchten Dashboards wurden anschliessend die Gemeinsamkeiten evaluiert. Hieraus entstanden anschliessend 7 zentrale Merkmale von webbasierten Dashboards (siehe Abbildung 4). Diese Merkmale bildeten anschliessend die Grundlage, um die 158 untersuchten Dashboards zu bewerten.
-\clearpage
+ 
+ Die Studie von Zhang fokussierte sich hierbei primär auf die ersten vier Aspekte des Modells (who uses what data to communicate what message in what form). Im erstellten Codebook finden sich diese vier Aspekte ebenfalls wieder. Hierbei kann der Aspekt \textbf{who} mithilfe der Metainformationen ``Publisher`` sowie ``URL`` beantwortet werden (siehe Abbildung \ref{fig:zhang_codebook_metadata}).
+ 
+ \begin{figure}[h]
+    \includegraphics[width=12cm]{images/zhang_codebook_metadata.png}
+    \centering
+    \caption{Ausschnitt Metadaten aus dem Codebook von Zhang ~\citep{zhang_codebook}}
+    \label{fig:zhang_codebook_metadata}
+\end{figure}
 
- \begin{figure}[ht]
+Der Aspekt \textbf{what data} ist durch die Sektion ``Data Handling`` abgedeckt, welcher Informationen bezüglich der Datenquelle etc. aufweist (siehe Abbildung \ref{fig:zhang_codebook_data_handling}).
+
+\begin{figure}[h]
+    \includegraphics[width=12cm]{images/zhang_codebook_data_handling.png}
+    \centering
+    \caption{Ausschnitt Data Handling aus dem Codebook von Zhang ~\citep{zhang_codebook}}
+    \label{fig:zhang_codebook_data_handling}
+\end{figure}
+
+ \textbf{What messages} sind durch die ``Intended Message`` Kategorie, welche mithilfe deduktiver sowie induktiver Codierung entstand, abgedeckt (siehe Abbildung \ref{fig:zhang_codebook_intended_message}).
+
+\begin{figure}[h]
+    \includegraphics[width=12cm]{images/zhang_codebook_intended_message.png}
+    \centering
+    \caption{Ausschnitt Intended Message aus dem Codebook von Zhang ~\citep{zhang_codebook}}
+    \label{fig:zhang_codebook_intended_message}
+\end{figure}
+
+ Der letzte Aspekt \textbf{in what form} kann ebenfalls aus dem Codebook entnommen werden. Zhang hat hierbei unter der Kategorie ``Type of Visualization`` verschiedene Visualisierungsarten wie zum Beispiel Liniendiagramme etc. aufgeführt (siehe Abbildung \ref{fig:zhang_codebook_type_of_visualization}).
+ 
+ 
+\begin{figure}[h]
+    \includegraphics[width=12cm]{images/zhang_codebook_type_of_visualization.png}
+    \centering
+    \caption{Ausschnitt Type of Visualization aus dem Codebook von Zhang ~\citep{zhang_codebook}}
+    \label{fig:zhang_codebook_type_of_visualization}
+\end{figure}
+
+Das Codebook bietet somit eine solide Grundlage um die Landschaft der Corona Datenvisualisierungen zu erfassen. Zudem kann es aufgrund seiner strukturierten Kategorien für weiterführende \textbf{Datenauswertungszwecke} verwendet werden.   
+ 
+ 
+\subsubsection{Corona-Dashboards}
+Barbazza führte in Bezug auf Corona Dashboards eine qualitative Studie durch, welche die Erfahrungen und Eindrücke von 33 nationalen Teams in Bezug auf die Konzeption und Umsetzung von Corona Dashboards untersuchte. Barbazza untersuchte hierbei zwei zentrale Hauptaspekte (siehe Abbildung \ref{fig:barbazza_method_design}). 
+
+
+\begin{figure}[h]
+    \includegraphics[width=12cm]{images/barbazza_method_design.png}
+    \centering
+    \caption{Hauptfokuspunkte der Studie von Barbazza ~\citep[S. 4]{barbazza}}
+    \label{fig:barbazza_method_design}
+\end{figure}
+
+Zum einen wurde der Entwicklungsprozess eines Corona Dashboards analysiert. Nachfolgend wurden Barrieren (Dinge welche den Entwicklungsprozess behinderten), Enablers (Dinge welche den Entwicklungsprozess vorangetrieben haben) sowie Lessons learned identifiziert. Die Studie von Barbazza bietet somit eine gute Grundlage um das bestehende Feedback in Bezug auf Corona Dashboard Design einzuholen.
+
+Anders als Barbazza fokussierte sich Ivankovi{\'c} hingegen explizit auf \textit{webbasierte} Dashboards. Konkret wurden hierbei Aspekte wie Funktion (Purpose), Inhalt und Daten (What) sowie die eigentliche Visualisierung (how they communicate COVID-19 data) untersucht. Aus den insgesamt 158 untersuchten Dashboards wurden anschliessend die Gemeinsamkeiten evaluiert. Hieraus entstanden 7 zentrale Merkmale von interaktiven webbasierten Dashboards (siehe Abbildung \ref{fig:ivankovic_characteristics_of_webbased_dashboards}). Diese Merkmale bildeten anschliessend die Grundlage, um die 158 untersuchten Dashboards zu bewerten ~\citep{ivankovic}. Ivankovi{\'c} bietet somit ein Bewertungsraster in Bezug auf interaktive, webbasierte Corona Dashboards an.
+
+
+ \begin{figure}[h]
     \includegraphics[width=10cm]{images/ivankovic_dashboard_characteristics.png}
     \centering
-    \caption{Merkmale von webbasierten Dashboards gemäss Ivankovic ~\citep[S. 12]{ivankovic}}
+    \caption{Merkmale von interaktiven, webbasierten Dashboards gemäss Ivankovi{\'c} ~\citep[S. 12]{ivankovic}}
+    \label{fig:ivankovic_characteristics_of_webbased_dashboards}
 \end{figure}
 
 
-Es gibt aber auch Studien welche Corona-Dashboards aus dem Blickwinkel der Ersteller betrachten. Die Studie von Barbazza untersuchte die gesammelten Erfahrungen von rund 33 nationale Teams, welche für die Umsetzung von Corona-Dashboards verantwortlich waren. Die Studie geht hierbei konkret auf die gemachten Erfahrungen innerhalb der Teams im ersten Jahr der Pandemie ein. Hieraus wurden anschliessend allgemeine Barrieren (common barriers), Dinge welche unterstützend waren (enabler) sowie die gemachten Erfahrungen innerhalb der Teams (lessons) thematisiert ~\citep{barbazza}.
+\subsection{Themenabgrenzung und Zielsetzung}
+Der Bereich der Datenvisualisierungen im Zusammenhang mit \gls{covid19} ist umfassend. Dashboards erlauben eine verdichtete Sicht auf die relevantesten Informationen, welche mit Hilfe von Datenvisualisierungen bereit gestellt werden können. Ein Problem welches Barbazza bereits in Ihrer Studie entdeckte, war dass die meisten Dashboards für eine allgemeine Zielgruppe ausgerichtet sind. Die vorliegende Arbeit hat daher zum Ziel, ein personalisierbares Dashboard für die Zielgruppe der Millenials zu entwickeln.
 
-\subsection{Themenabgrenzung}
-Die vorliegende Arbeit befasst sich mit Datenvisualisierungen, welche im Zuge der Corona-Pandemie erstellt worden sind. Jedoch wird der Hauptfokus der vorliegenden Arbeit gezielt auf \textbf{Corona-Dashboards} gelegt. Zum Einen erlauben Dashboards die \textit{Kombination} von verschiedenen Datenvisualisierungen, zum Anderen erlauben sie eine akummulierte Sicht auf die \textit{relevantesten Informationen} für eine bestimmte Zielgruppe. Die Wichtigkeit von Dashboards haben auch weltweite Regierungsorganisationen erkannt. Gemäss Barbazza war das \textit{webbasierte Dashboards} die bevorzugte Visualisierungsart von Regierungsorganisationen, wenn es darum geht, Informationen zur Corona-Pandemie darzustellen ~\citep{barbazza}.
-
-
-\subsection{Zielsetzung und Forschungsfrage}
-Die bestehenden Studien von Corona-Dashboards, sowie Datenvisualisierungen sprechen primär eine \textit{breite Zielgruppe} an. Zudem bieten bestehende Dashboards nach der Erstellung nur \textit{sehr begrenzte Anpassungsmöglichkeiten durch den Nutzer selbst}. Die vorliegende Arbeit möchte diese Lücke schliessen und formuliert daher folgende übergeordnete Fragestellung:
+\subsection{Forschungsfrage}
+Die vorliegende Arbeit möchte die Erstellung eines personalisierbaren Corona Dashboards für die Zielgruppe Millenials erforschen. Daher wurde folgende übergeordnete Fragestellung formuliert:
 
 \begin{center}
 \textbf{Wie stellen sich Millennials ein personalisierbares Corona Dashboard vor?}
@@ -74,14 +138,13 @@ Um diese Forschungsfrage abzudecken, wurden folgende untergeordnete Fragestellun
 \end{center}
 
 \subsection{Methodische Vorgehensweise}
-Da es sich bei der übergeordneten Forschungsfrage um eine Fragestellung mit explorativem Charakter handelt, wird für die Methodik das Design Science Research (\gls{dsr}) Modell nach Peffers verwendet (siehe Abbildung 5).
+Da das Ziel der vorliegenden Arbeit die Erstellung eines personalisierbaren Corona Dashboards für Millenials ist, wurde als methodische Vorgehensweise das \gls{dsr} Modell nach Peffers gewählt, welches die Erstellung eines Artefakts zulässt (siehe Abbildung \ref{fig:peffers_dsr_model}).
 
-
-\begin{figure}[ht]
-	\includegraphics[width=12cm]{images/peffers_dsr_model.png}
+\begin{figure}[h]
+	\includegraphics[width=14cm]{images/peffers_dsr_model.png}
 	\centering
-	\caption{DSR Modell nach Peffers ~\citep{peffers}}
+	\caption{DSR Modell nach Peffers ~\citep[S. 54]{peffers}}
+	\label{fig:peffers_dsr_model}
 \end{figure}
 
-Bei diesem Modell gibt es mehrere Einstiegsmöglichkeiten (siehe \textit{Possible Research Entry Points}). Der Einstiegspunkt für die vorliegende Arbeit bildet der Punkt \textbf{Problem-Centered Initiation}. Das Problem, welches gelöst werden soll, ist die die starre Natur bestehender Corona Dashboards. Diese Dashboards lassen sich nach \textbf{der Erstellung für die angesprochene Zielgruppe} nur eingeschränkt anpassen oder personalisieren. In diesem Kontext ist die Entwicklung eines Prototyps interessant, welcher die Erstellung der Dashboards \textbf{in die Hände der Zielgruppe selbst legt} und so auch Personalisierungs- und Anpassungsmöglichkeiten bietet. Dies bildet somit die Grundlage für den ersten Schritt des Models \textit{Identify Problem und Motivation}. Im zweiten Schritt \textit{Define Objective of a Solution} geht es darum, das Ziel einer möglichen Lösung aufzuzeigen. Anschliessend geht es im Schritt \textit{Design und Development} um die eigentliche Erstellung des Artefakts, was im Zuge dieser Arbeit ein High Fidelity Prototyp darstellt. Anschliessend geht es in den nächsten Schritten noch um die Evaluation des erstellten Prototyps, sowie die Publikation der Ergebnisse. Jedoch beschränkt sich die vorliegende Arbeit auf die Erstellung eines Prototyps aufgrund teilstrukturierter Interviews mit Millennials. Die eigentliche Evaluation des Prototyps kann im Rahmen einer weiterführenden Arbeit evaluiert werden.
-
+Das Modell bietet hierbei mehrere Einstiegsmöglichkeiten (siehe ``Possible Research Entry Points``). Der Einstiegspunkt für die vorliegende Arbeit bildet der Punkt \textbf{Design \& Development Centered Initiation}. Dies setzt zugleich auch den Zielfokus der Arbeit auf den Bereich Design und Entwicklung. Um diesen Kernbereich jedoch ausreichend erforschen zu können, werden im Verlaufe der Arbeit die ersten fünf Aktivitäten ``Identify Problem \& Motivation``, ``Define Objective \& Solution``, ``Design \& Development``, ``Demonstration`` sowie ``Evaluation`` behandelt.
