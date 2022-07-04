@@ -140,8 +140,10 @@ Gemäss Stephen Few gibt es verschiedene Arten Dashboards zu implementieren, die
 \clearpage
 \subsubsection{Kommerzielle Lösungen}
 
+\noindent
 \textbf{Esri ArcGIS}
 \newline
+\indent
 ArcGIS ist spezialisiert auf die Darstellung von Daten, welche mit Ortsangaben verbunden sind, was sich auch als Teil des Namens mit dem Suffix \gls{gis} wiederspiegelt. Die \textit{Spezialisierung auf ortsabhängige Daten} machen ArcGIS eine gute Wahl, für die Erstellung von Corona Dashboards. Dies zeigt auch die Studie von Barbazza, gemäss welcher rund 33\% der Dashboards mit Esri ArcGIS entwickelt ~\citep[S. 9]{barbazza} wurden.  Das wichtigste Produkt im Kontext dieser Arbeit ist hierbei das Dashboard Modul von ArcGIS (siehe Abbildung \ref{fig:arcgis_dashboard_module}). Mithilfe dieser Software ist es möglich Dashboards für verschiedene Rollen zu erstellen (siehe Kapitel \ref{ch:classification_of_dashboards}).
 
 \begin{figure}[h]
@@ -163,8 +165,10 @@ Ein bekanntes Beispiel für ein entwickeltes Corona Dashboard ist hierbei das Da
 
 
 \clearpage
+\noindent
 \textbf{Google Data Studio}
 \newline
+\indent
 Im Gegensatz zu ArcGIS ist Google Data Studio \textit{kostenlos}. Google Data Studio erlaubt es dem Nutzer \textit{anhand von Vorlagen} Reports und Dashboards zu erstellen (siehe Abbildung \ref{fig:google_data_studio}).
 
 \begin{figure}[h]
@@ -193,9 +197,10 @@ Gemäss der Studio von Barbazza setzte zum Beispiel Belgien Google Data Studio f
     \label{fig:google_data_studio_corona_dashboard}
 \end{figure}
 
-
+\noindent
 \textbf{Tableau}
 \newline
+\indent
 Gemäss Sigdel zählt Tableau zu den Marktführern im Bereich der Daten Visualisierungen und Business Intelligence (Marktanteil 17\%) ~\citep{arcgis_comparison}. Im Vergleich zu ArcGIS ist der Preis von Tableau ebenfalls kostengünstiger. Tableau weisst seine Stärken vorallem bei nicht geografischen Daten auf. Hier bietet Tableau viele unterschiedliche Datenvisualisierungen und leichte Anpassungsmöglichkeiten ~\citep{arcgis_comparison}.
 
 Ein Corona Dashboard, welches mit der Tableau Software realisiert wurde, ist das Dashboard von Estonia (siehe Abbildung \ref{fig:tableau_dashboard}).
@@ -213,8 +218,10 @@ Kommerzielle Lösungen wie Tableau und ArcGIS bieten viele Möglichkeiten um Das
 In-House Lösungen sind selbst entwickelte Lösungen. Der Vorteil von diesen Lösungen besteht darin, dass volle Kontrolle über die Funktionalitäten der Software besteht. Jedoch sind In-House Lösungen mit hohen Entwicklungs- und Wartungskosten verbunden. Im Rahmen dieser Arbeit wird der Fokus bei den In-House Lösungen \textbf {auf Web Technologien gelegt}. Ein zentraler Vorteil von webbasierten Dashboards liegt darin, dass sehr einfach Visualisierungen von Echtzeitdaten möglich sind ~\citep[S. 34]{information_dashboard_design}. Ein weiterer ausschlaggebender Punkt ist die starke Verbreitung des Web Browsers, welcher auch auf jedem Smartphone verfügbar ist. Zudem können dank moderner Web Technologien anpassungsfähige Layouts mittels Responsive Design implementiert werden.
 
 \clearpage
+\noindent
 \textbf{Technologien für die Erstellung von Frontend Web Applikationen}
 \newline
+\indent
 Gemäss einer Umfrage von State of Javascript Survey 2020 sind die zwei populärsten Frontend Technologien zur Erstellung von Web Applikationen React sowie \textbf{Angular} (siehe Abbildung \ref{fig:most_used_frontend_frameworks}). Der Hauptfokus der Arbeit wird hierbei auf das Angular Framework gelegt.
 
 \begin{figure}[h]
@@ -224,13 +231,17 @@ Gemäss einer Umfrage von State of Javascript Survey 2020 sind die zwei populär
     \label{fig:most_used_frontend_frameworks}
 \end{figure}
 
+\noindent
 \textbf{Angular}
 \newline
+\indent
 Angular ist ein Open Source Web Framework das auf einem \textit{Komponenten basierten Ansatz} aufgebaut ist und von der Firma Google sowie freiwilligen Personen entwickelt wird ~\citep{what_is_angular}. Open Source bedeutet, dass der Quellcode für jedermann frei verfügbar ist. Unter einer Komponente ist ein in sich abgeschlossenes Element zu verstehen, welches sowohl die visuellen Aspekte als auch die logischen Aspekte miteinander vereint. Die visuellen Aspekte werden dabei mithilfe der Technologien \gls{html} sowie \gls{css} umgesetzt werden. Die Logik der Komponente selbst wird hierbei in der Open Source Programmiersprache TypeScript, welche von Microsoft entwickelt wird, umgesetzt. TypeScript hat im Gegensatz zu JavaScript den Vorteil von \textit{statischer Typisierung}, d.h der Datentyp der Variablen wird explizit deklariert ~\citep{typescript}. Statische Typisierung hat den Vorteil, dass der Compiler (Programm welches den Code verarbeitet) Optimierungen vornehmen kann und bereits Fehlerquellen zur Kompilierungszeit anstelle der Ausführungszeit (wenn die Web Applikation bereits läuft) erkennt. Da der Komponenten basierte Ansatz ein zentrales Element des Angular Frameworks bildet, wird dieser nachfolgend mithilfe eines Beispiels illustriert. Die nachfolgenden Bilder wurden mithilfe der Website Carbon\footnote{https://carbon.now.sh/} erstellt.
 
 \clearpage
+\noindent
 \textit{Implementierung der Komponentenlogik in TypeScript}
 \newline
+\indent
 Eine Komponente beginnt mit der Deklaration von Metainformationen. Diese Metainformationen umfassen den Namen des Selektors, den Pfad zur \gls{html} sowie zur \gls{css} Datei der Komponente. Der Selektor bestimmt wie die Komponente bei der eigentlichen Verwendung zu bennenen ist. Anschliessend folgt die eigentliche Implementierung der Komponente selbst. Die Komponente welche zur Veranschaulichungszwecken vom Autor dieser Arbeit erstellt wurde, ist ein einfacher Zähler. Folglich benötigt die Komponente eine Zählvariable (counter). Die Variable ist hierbei vom Typ number (statische Typisierung), was einer Zahl entspricht. Mithilfe dieser Information weiss der Compiler, dass nur gewisse Aktionen wie Addition, Multiplikation etc. auf diesen Datentyp angewendet werden können. Somit sind bereits im Vorfeld Fehler vermeidbar, welche durch die Verwendung einer dynamischen Typisierung wie sie JavaScript mitbringt erst zur Laufzeit aufgefallen wären. Die Komponente bietet zudem noch eine Funktion zur Inkrementierung sowie Dekrementierung des Zahlenwerts an. Abbildung \ref{fig:angular_component_ts} veranschaulicht nocheinmals alle besprochenen Punkte auf einen Blick.
 
 \begin{figure}[h]
@@ -241,8 +252,10 @@ Eine Komponente beginnt mit der Deklaration von Metainformationen. Diese Metainf
 \end{figure}
 
 \clearpage
+\noindent
 \textit{Implementierung der visuellen Gestaltung der Komponente in HTML}
 \newline
+\indent
 Nebst der Logik der Komponente findet die visuelle Gestaltung in der verwiesenen \gls{html} sowie \gls{css} Datei statt (siehe templateUrl sowie styleUrls in Abbildung \ref{fig:angular_component_ts}). Der Zahlenwert wird hierbei in einem einfachen Paragraph Element dargestellt. Die Schreibweise mit den doppelten geschwungenen Klammern stellt sicher, dass wenn sich der Zahlenwert (counter Variable) aktualisiert, dies automatisch im \gls{html} ebenfalls reflektiert wird. Nebst der Darstellung des Zahlenwertes gibt es noch zwei Buttons welche an die Inkrementierungs sowie Dekrementierungs Funktionen gebunden sind. Abbildung \ref{fig:angular_component_html} veranschaulicht die oben aufgeführten Punkte noch einmal als Gesamtbild.
 
 \begin{figure}[h]
@@ -252,8 +265,10 @@ Nebst der Logik der Komponente findet die visuelle Gestaltung in der verwiesenen
     \label{fig:angular_component_html}
 \end{figure}
 
+\noindent
 \textit{Verwendung der erstellten Komponente}
 \newline
+\indent
 Die erstellte Komponenten muss nun in einem letzten Schritt noch verwendet werden. Dies ist einfach über die Verwendung des definierten Selektors (siehe selector in  Abbildung \ref{fig:angular_component_ts}) möglich (siehe Abbildung \ref{fig:angular_component_usage}). Die eigentliche Visualisierung im Browser kann der Abbildung \ref{fig:angular_component_browser} entnommen werden.
 
 \begin{figure}[h]
@@ -270,8 +285,10 @@ Die erstellte Komponenten muss nun in einem letzten Schritt noch verwendet werde
     \label{fig:angular_component_browser}
 \end{figure}
 
+\noindent
 \textit{CLI Tools}
 \newline
+\indent
 Das Erstellen von Komponenten sowie das Erzeugen der notwendigen \gls{html} und \gls{css} Dateien bietet Raum für Automatisierung. Angular bietet aus diesem Grund \gls{cli} Tools an. Mithilfe der \gls{cli} Tools können sowohl das Generieren von Angular Applikationen sowie das automatische Erstellen von Komponenten etc. automatisiert werden. Ebenfalls können für den Produktionsbetrieb optimierte Dateien erstellt werden. Die hierfür notwendigen Befehle können einfach über ein Terminal eingegeben werden. Tabelle \ref{table:tbl:angular_cli_commands} veranschaulicht die wichtigsten Befehle in Bezug auf die oben erwähnten Punkte.
 
 % Begin Angular CLI Table
@@ -292,15 +309,18 @@ ng serve & Startet einen lokalen Web Server für die Entwicklung.\\ \bottomrule
 \end{table}
 % End Angular CLI Table
 
-
+\noindent
 \textbf{Technologien für Frontend Datenvisualisierungen}
 \newline
+\indent
 Angular bietet ein Grundgerüst um mithilfe von Komponenten eine solide Web Applikationen implementieren zu können. Im Kontext von Dashboards und vorallem Corona sind jedoch nebst den visuellen Aspekten auch die Unterstützung von unterschiedlichen Datenvisualisierungen von hoher Relevanz. Barbazza merkte in Ihrer Studie ebenfalls die Limitationen von kommerziellen Lösungen in Bezug auf die Auswahl und Vielfältigkeit der Datenvisualisierungen an ~\citep[S. 9]{barbazza}. Im Rahmen dieser Arbeit wird der Fokus bezüglich Datenvisualisierungen auf das \textbf{Highcharts Framework} gesetzt, welches von rund 80 der 100 grössten Firmen weltweit verwendet wird ~\citep{highcharts}.
 \newline
 
 \newpage
+\noindent
 \textbf{Highcharts}
 \newline
+\indent
 Das Highcharts Framework bietet eine breite Unterstützung für die Web sowie Mobilen Platformen an. Programmiersprachen wie Python, .NET sowie Web Frameworks wie React und Angular werden ebenfalls unterstützt. Highcharts unterteilt seine breite Palette an Datenvisualisierungen in verschiedene Module ~\citep{highcharts} an. Die Modularisierung hat den Vorteil, dass nicht das gesamte Framework sondern nur die benötigten Teile davon geladen werden müssen. Zudem bietet Highcharts zur jeder Art von Datenvisualisierung eine Beispielapplikation an, welche aufzeigt, wie die Visualisierungen im Kontext einer Web Applikation verwendet werden sollen (siehe Abbildung \ref{fig:highcharts_demo}).
 
 \begin{figure}[h]
