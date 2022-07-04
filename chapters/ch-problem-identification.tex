@@ -1,9 +1,57 @@
 \section{Problemidentifizierung und Motivation}
 Gemäss Peffers soll der Schritt \textit{Problem Identification \& Motivation} dabei helfen, den Nutzen einer möglichen Lösung aufzuzeigen. Dies wiederum steigert zum einen die Motivation an der Arbeit selbst und sorgt zum anderen dafür, dass die Beweggründe für alle beteiligten Personen verständlich sind ~\citep[S. 52 + 55]{peffers}.
 
-
 \subsection{Problemidentifikation}
-Als Grundlage für die Problemidentifikation dient die Studie von Barbazza. Barbazza hat diverse Probleme in den Bereichen ``Users`` sowie ``Software`` identifiziert. Die wichtigsten Probleme waren hierbei die Entwicklung eines Dashboards für eine breite Zielgruppe, unzureichende Möglichkeiten um an Nutzerfeedback zu kommen sowie die Limitationen der eingesetzten Software in Bezug auf die Auswahl der Datenvisualisierungen und die Anpassungsmöglichkeiten ~\citep[S. 14-15]{barbazza}.
+Als Grundlage für die Problemidentifikation dient die Studie von Barbazza (siehe Kapitel \ref{ch:introduction_corona_dashboards}). Hierbei wird der Fokus auf die Bereiche ``Nutzer`` sowie ``Software`` gelegt. Tabelle \ref{table:identified_user_software_problems} veranschaulicht die identifizierten Problematiken. Die Tabelle basiert dabei auf den identifizierten Barrieren von Barbazza ~\citep[S. 14 + 15]{barbazza}.
 
+% Begin Table Problem Identification
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Bereich} & \textbf{Unterkategorie} & \textbf{Problembeschreibung} \\ \midrule
+Software & Verfügbarkeit & \begin{tabular}[c]{@{}l@{}}Hohe Lizenzkosten\\ Langsame Datenverarbeitung sowie Publikation der Daten\end{tabular} \\ \midrule
+ & Funktionalität & \begin{tabular}[c]{@{}l@{}}Software gibt Aussehen und Möglichkeiten des Dashboards vor\\ Limitationen in der Auswahl von Datenvisualisierungen\end{tabular} \\ \midrule
+Nutzer & Zielgruppe & Keine definierte Zielgruppe vorhanden \\ \midrule
+ & \begin{tabular}[c]{@{}l@{}}Informationsbedarf\\ User Experience\\ Erwartungen\end{tabular} & \begin{tabular}[c]{@{}l@{}}Eingeschränktes Wissen über die Bedürfnisse der Zielgruppe\\ Kein systematischer Weg um mit Nutzerfeedback umzugehen\\ Nutzer haben hohe Erwartungen jedoch ein geringes Verständnis für Daten\end{tabular} \\ \bottomrule
+\end{tabular}%
+}
+\caption{Identifizierte Probleme von Barbazza in den Bereichen Nutzer und Software (Eigene Darstellung)}
+\label{table:identified_user_software_problems}
+\end{table}
+% End Table Problem Identification
+
+\subsubsection{Probleme im Bereich Software}
+Problemen im Bereich Software unterteilt Barbazza in die Bereiche Verfügbarkeit sowie Funktionalität.\\
+
+\noindent
+\textbf{Verfügbarkeit}
+\newline
+\indent
+Im Bereich der Verfügbarkeit werden die \textit{hohen Lizenzkosten} der Software genannt. Viele kommerzielle Lösungen bieten zwar für eine gewisse Zeit eine kostenfreie Nutzung der Software an (Free Trial), müssen jedoch nach Ablauf der Zeitperiode bezahlt werden ~\citep[S. 15]{barbazza}. Es ist jedoch zu bedenken, dass durch die Bezahlung der Software auch eine qualitativ hochwertige Supportanlaufstelle besteht. Des Weiteren sind kommerzielle Lösungen auch auf bestimmte Zielbereiche ausgelegt und können durch die gewonnenen Expertisen die Entwicklungszeit von Dashboards verringern (siehe Kapitel \ref{ch:theory_commercial_solutions}). Nichtsdestotrotz sind hohe Lizenzkosten eine Entscheidung, welche mit Bedacht getroffen werden muss. Ein weiterer Punkt welche im Bereich Verfügbarkeit ist die \textit{langsame Datenverarbeitung sowie Publikation der Daten}. Besonders bei Pandemien, welche eine hohe Anzahl von Datenmengen generieren ist eine schnelle Datenprozessierung von hoher Bedeutung. Mithilfe von In-House Lösungen könnte die langsame Datenverarbeitung zum Beispiel durch den Einsatz von passenden Bibliotheken wie Highcharts entschärft werden (siehe Kapitel \ref{ch:theory_in_house_solutions}).\\
+
+\noindent
+\textbf{Funktionalität}
+\newline
+\indent
+In Bezug auf die Funktionalität sind Probleme in Bezug auf das vorgegebene Design durch die verwendete Software Lösung sowie die limitierte Auswahl der Datenvisualisierungsarten aufgefallen. Kommerzielle Softwarelösungen erlauben zu Beginn ein schnelle Entwicklung, schränken jedoch die Anpassungsmöglichkeiten ein. Diese Problematik tritt bei In-House Lösungen in der Regel nicht auf, da hier die gesamte Software Lösung selbst entwickelt wird. Dies ist jedoch mit einer erhöhten Entwicklungszeit verbunden. Es muss also abgewogen werden ob eine schnelle Entwicklung mithilfe einer kommerziellen Lösung zu bevorzugen ist, oder ob ein hoher Anpassungsgrad der Software sowie eine Vielzahl von unterstützen Datenvisualisierungen mithilfe einer In-House Lösung erreicht werden will.
+
+\subsubsection{Probleme im Bereich Nutzer}
+Barbazza führte im Bereich Nutzer primär die Unklarheit der Zielgruppe sowie deren Erwartungen und Informationsbedarf an. Diese Punkte haben des weiteren auch einen Einfluss auf die Konzipierung von Dashboards und der damit verbundenen User Experience (siehe Rollen im Kapitel \ref{ch:theory_classification_of_dashboards}).\\
+
+\noindent
+\textbf{Zielgruppe}
+\newline
+\indent
+Eines der Hauptrobleme im Bereich Nutzer war die Unklarheit der eigentlichen Zielgruppe. Auch gab es gemäss Barbazza keinen direkten Kontakt mit der Zielgruppe selbst ~\citep[S. 8]{barbazza}. Die Dashboards wurden somit für die allgemein Öffentlichkeit entwickelt.\\
+
+\noindent
+\textbf{Informationsbedarf, User Experience und Erwartungen}
+\newline
+\indent
+Gemäss Few sollten Dashboards für eine bestimmte Zielgruppe angepasst sein, um seine volle Wirkung zu erreichen ~\citep[S. 34]{information_dashboard_design}. Da jedoch nicht eine dedizierte Zielgruppe angesprochen wurde, hat dies direkten Einfluss auf den Informationsbedarf und somit auch auf die User Experience. Zudem hat es gemäss Barbazza keinen systematischen Weg gegeben, um an wertvolles Nutzerfeedback zu kommen, was die Entwicklung von nutzerspezifischen Funktionalitäten erschwert. Für bestimmte Nutzer können so auch andere Erwartungen und somit Diskrepanzen in Bezug auf die Anforderungen entstehen.
+
+\clearpage
 \subsection{Motivation – Erstellung eines personalisierbaren Corona Dashboards für Millennials}
-Das Ziel dieser Arbeit ist die Konzeption und Erstellung eines Corona Dashboards für die Zielgruppe Millennials. Hierbei soll konkret ermittelt werden, welche Informationen sowie Visualisierungsarten für die Zielgruppe von Relevanz sind. Zudem soll ein besonderer Aspekt auf die Anpassbarkeit (Personalisierbarkeit) des Corona Dashboards gelegt werden. Die Lösung soll dazu dienen, den Erstellungsprozess von Dashboards in die Hände der Zielgruppe selbst zu legen. Nutzer können hierbei aus einem Katalog von Visualisierungen auswählen und ihr ganz persönliches Dashboard gestalten. Das erstellte Dashboard kann anschliessend an die relevanten Behörden (BAG) gesendet werden und soll so neue Ideen für Dashboard Designs antreiben sowie das Einholen von Feedback fördern.
+Um die oben erwähnten Problematiken in den Bereichen Software und Nutzer zu addressieren, fokussiert sich die vorliegende Arbeit auf die Erstellung eines personalisierbaren Corona Dashboards für die Zielgruppe Millennials. Hierbei soll konkret ermittelt werden, welche Informationen sowie Visualisierungsarten für die Zielgruppe von Relevanz sind. Zudem soll der Fokus auf die Anpassbarkeit des Corona Dashboards gelegt werden. Das Dashboard soll einfach zu Erstellen sein und somit die Möglichkeit bieten, dass auch unerfahrene Nutzer auf eine einfache Art und Weise Dashboards gestalten können. Der Gestaltungsprozess soll dabei anregend sein und die Zielgruppe dazu animieren Ihre eigenen Dashboards zu gestalten. Abschliessend soll auch eine Möglichkeit geschaffen werden, um entsprechendes Feedback einzureichen. Das Dashboard wird dabei als In-House Lösung von Grund auf neu entwickelt und unter einer Open Source Lizenz für jedermann frei zugänglich zur Verfügung gestellt. Die Hoffnung des Autors ist dabei, dass eine Community Plattform für die Erstellung von Dashboards in Zeiten der Pandemie geschaffen werden kann.
