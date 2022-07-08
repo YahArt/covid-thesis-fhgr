@@ -12,7 +12,7 @@
 \usepackage{longtable}
 \usepackage{graphicx}
 \usepackage[natbibapa]{apacite}
-\usepackage[font=small]{caption}
+\usepackage{caption}
 \usepackage{booktabs}
 \usepackage{lastpage}
 \usepackage{textcomp}
@@ -25,10 +25,15 @@
  bottom=20mm,
 }
 
+
+\setstretch{1.3}
+\captionsetup{font=scriptsize}
+
 \graphicspath{ {./images/} }
 
+\glstocfalse
+
 \urlstyle{same}
-\setstretch{1.3}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -68,10 +73,14 @@
 		\vspace{0.5cm}
 		\LARGE
 		Analyse und Implementierung eines personalisierbaren Corona Dashboards für Millenials
+		
+		\vspace{1cm}
+		\small
+		Diese Arbeit wurde im Rahmen der Bachelorthesis im Bachelor Studium Digital Business Management an der Fachhochschule Graubünden erarbeitet.
 
 		\vspace{1.5cm}
 		\normalsize
-		\textbf{Yannick Hutter}\\
+		\textbf{Yannick Hutter (Matrikelnummer: 17-175-819)}\\
 		\textbf{Digital Business Management Klasse 18tz}\\
 		\textbf{Talackerstrasse 8}\\
 		\textbf{8887 Mels}\\
@@ -83,11 +92,7 @@
 		Korefferent: Michael Burch\\
 
 		\vspace{0.8cm}
-
-
-		Digital Business Management\\
-		Fachhochschule Graubünden\\
-		Mels, April 2022
+		Mels, Juli 2022
 	\end{center}
 \end{titlepage}
 
@@ -101,6 +106,10 @@
 \clearpage
 \listoffigures
 \listoftables
+
+
+\clearpage
+\printglossary[title=Abkürzungsverzeichnis, type=\acronymtype]
 
 \clearpage
 \pagenumbering{arabic}
@@ -125,7 +134,7 @@
 \include{chapters/ch-demonstration-and-evaluation}
 
 \clearpage
-\include{chapters/ch-reflexion-and-limitations}
+\include{chapters/ch-reflexion}
 
 \clearpage
 \include{chapters/ch-conclusion}
@@ -138,9 +147,6 @@
 
 \clearpage
 \appendix
-
-\clearpage
-\printglossary[title=Abkürzungsverzeichnis, type=\acronymtype]
 
 \clearpage
 \include{appendix/app-user-interview-guide}
